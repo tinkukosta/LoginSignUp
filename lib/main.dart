@@ -1,14 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+// import 'package:travelapp/login.dart';
 void main(){
   runApp(
     MaterialApp(
 
       debugShowCheckedModeBanner: false,
-      home: HomePage(
-
-
-      ),
+      home: HomePage(),
     )
 
   );
@@ -65,7 +63,7 @@ class HomePage extends StatelessWidget {
                     onPressed: (){},
                     shape: RoundedRectangleBorder(
                       side: BorderSide(
-                        color: Colors.black,
+                        color: Colors.yellow,
                       ),
                       borderRadius: BorderRadius.circular(60)
                     ),
@@ -79,13 +77,13 @@ class HomePage extends StatelessWidget {
                   Container(
                     //padding: EdgeInsets.only(top: 3, left: 3),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(60),
-                      border: Border(
-                        bottom: BorderSide(color:  Colors.black),
-                        top: BorderSide(color:  Colors.black),
-                        left: BorderSide(color:  Colors.black),
-                        right: BorderSide(color:  Colors.black),
-                      )
+                       borderRadius: BorderRadius.circular(60),
+                      // //border: Border(
+                      //   bottom: BorderSide(color:  Colors.black),
+                      //   top: BorderSide(color:  Colors.black),
+                      //   left: BorderSide(color:  Colors.black),
+                      //   right: BorderSide(color:  Colors.black),
+                      // )
 
                     ),
                     child:  MaterialButton(
