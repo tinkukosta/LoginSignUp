@@ -1,6 +1,6 @@
-# travelapp
+# flutter_practice
 
-A new Flutter application.
+signup and login page
 
 ## Getting Started
 
