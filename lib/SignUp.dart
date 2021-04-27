@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,8 +22,9 @@ class LoginPage extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
-       height: MediaQuery.of(context).size.height,
+      body: SingleChildScrollView(
+        child: Container(
+          height: MediaQuery.of(context).size.height-100,
           width: double.infinity,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -32,13 +33,13 @@ class LoginPage extends StatelessWidget {
                 children: <Widget>[
                   Column(
                     children: <Widget>[
-                      Text("Login",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 30,
-                      ),),
+                      Text("SignUp",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30,
+                        ),),
                       SizedBox(height: 12,),
-                      Text("Login to your account",
+                      Text("Create an account, it's free!",
                         style: TextStyle(
                           color: Colors.grey[700],
                           fontSize: 14,
@@ -48,16 +49,17 @@ class LoginPage extends StatelessWidget {
                   ),
                 ],
               ),
-             Padding(
-               padding: EdgeInsets.symmetric(horizontal: 32),
-               child: Column(
-                 children: <Widget>[
-                   makeInput(label: "Email"),
-                   makeInput(label: "Password", obscureText: true),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 32),
+                child: Column(
+                  children: <Widget>[
+                    makeInput(label: "Email"),
+                    makeInput(label: "Password", obscureText: true),
+                    makeInput(label: "Confirm Password", obscureText: true),
 
-                 ],
-               ),
-             ),
+                  ],
+                ),
+              ),
               Padding(
                   padding:EdgeInsets.symmetric(horizontal: 32),
                   child: Container(
@@ -82,7 +84,7 @@ class LoginPage extends StatelessWidget {
 
                           borderRadius: BorderRadius.circular(6)
                       ),
-                      child: Text("Login",
+                      child: Text("Sign Up",
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 18,
@@ -91,27 +93,24 @@ class LoginPage extends StatelessWidget {
                   )
 
               ),
-            SizedBox(height: 32,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("Don't have an account?"),
-                Text("Sign Up",
-                  style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 16,
+              SizedBox(height: 32,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Already have an account, "),
+                  Text("Log In",style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 16,
+                  ),),
 
-                ),
+                ],
 
-                ),
-
-              ],
-
-            ),
+              ),
               SizedBox(height: 32,)
             ],
 
           ),
+        ),
       ),
     );
   }
@@ -128,17 +127,17 @@ class LoginPage extends StatelessWidget {
         TextField(
           obscureText: obscureText,
           decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 12),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.grey[700]
+              contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 12),
+              enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors.grey[700]
+                  )
+              ),
+              border: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.grey[700],
+                  )
               )
-            ),
-            border: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.grey[700],
-              )
-            )
           ),
         ),
         SizedBox(height: 32,)

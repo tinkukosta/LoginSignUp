@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:travelapp/SignUp.dart';
 import 'package:travelapp/login.dart';
 void main(){
   runApp(
     MaterialApp(
 
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: HomePage(),
     )
 
   );
@@ -60,7 +61,9 @@ class HomePage extends StatelessWidget {
                   MaterialButton(
                     minWidth: double.infinity,
                     height: 64,
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+                    },
                     shape: RoundedRectangleBorder(
                       side: BorderSide(
                         color: Colors.yellow,
@@ -89,7 +92,9 @@ class HomePage extends StatelessWidget {
                     child:  MaterialButton(
                       minWidth: double.infinity,
                       height: 64,
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()));
+                      },
                       color: Colors.yellow,
                       elevation: 0,
                       shape: RoundedRectangleBorder(
